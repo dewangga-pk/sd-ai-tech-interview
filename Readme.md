@@ -18,7 +18,7 @@ A full-stack web application powered by the **MERN stack** and integrated with *
 - 📝 **Add More Questions** — Add more questions to the session.
 - 📖 **Detailed Explanation** — View deeper explanations to better understand the context of each question.
 - 🗂️ **Session Management** — Create, delete, and explore session details.
-- Docker support for quick deployment
+- 🐳 **Docker** support for quick deployment
 ---
 
 ## 🛠️ Built With
@@ -142,7 +142,8 @@ By default, the frontend will be served at: `http://localhost:5173`
 
 ## 📸 Screenshots
 
-> _(Add screenshots or demo GIFs here)_
+> ![hero-img](https://github.com/user-attachments/assets/ff6cc22e-4508-4a3f-808a-2b9d5b4639e4)
+
 
 ---
 
