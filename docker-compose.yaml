@@ -1,0 +1,41 @@
+services:
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_BASE_URL: http://localhost:8000
+    ports:
+      - 3000:3000
+    restart: always
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./backend
+    volumes:
+      - ./backend/uploads:/app/uploads
+    ports: 
+      - 8000:8000
+    restart: always
+    depends_on:
+      - mongo
+    environment:
+      MONGO_URI: mongodb://mongo:27017/interview_tool
+      JWT_SECRET: <your_jwt_secret>
+      GEMINI_API_KEY: <your_gemini_api_key>
+      PORT: 8000
+  mongo:
+    image: mongo
+    restart: always
+    volumes:
+      - mongo_data:/data/db
+    expose:
+      - 27017
+
+networks:
+  default:
+    name: interview-network
+
+volumes:
+  mongo_data:

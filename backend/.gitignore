@@ -25,3 +25,12 @@ dist-ssr
 
 #project env
 .env
+
+# Ignore all files in uploads/
+uploads/*
+
+# Keep .gitkeep (to track folder if needed)
+!uploads/.gitkeep
+
+# Keep default avatar image
+!uploads/1750393797537-blank_avatar.png
